@@ -1,0 +1,238 @@
+@font-face {
+  font-family: 'GBS';
+  src: url('../font/Poppins-Medium.ttf');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'GBS';
+}
+
+body{
+  background-image:url(../image/IT.jpg);
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+
+header{
+  position: fixed;
+  display: flex;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  background: transparent;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+img{
+  top: 0;
+  position: absolute;
+}
+.logo{
+  text-transform: uppercase;
+  margin-left: 140px;
+  font-size: 40px;
+  color: #4dff47;
+  user-select: none;
+  text-shadow: 0 0 10px #4dff47;
+}
+
+.nav a{
+  color: aliceblue;
+  position: relative;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 50px;
+}
+
+.nav a::after{
+  content: '';
+  width: 100%;
+  height: 3px;
+  background: rgb(253, 253, 253);
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  border-radius: 5px;
+  transform-origin: middle;
+  transform: scaleX(0);
+  transition: 0.3s;
+}
+
+.nav a:hover:after{
+  transform-origin: middle;
+  transform: scaleX(1);
+  
+}
+
+.nav .btnlogin{
+  color:white;
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 40px;
+  outline: none;
+  cursor: pointer;
+  border: 2px solid;
+  transition: 0.5s;
+}
+
+.nav .btnlogin:hover{
+  background-color: red;
+}
+
+.wrapper{
+  position: relative;
+  width: 900px;
+  height: 450px;
+  background: transparent;
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  border: 2px solid #0ef;
+  box-shadow: 0 0 25px #0ef; 
+  transform: scale(0);
+  overflow: hidden;
+  transition: transform .5s ease , height .2s ease;
+}
+
+.wrapper.active-pop{
+  transform: scale(1);
+}
+
+.wrapper .close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  font-size: 40px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  border-bottom-left-radius: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.wrapper .login-form{
+  top: 10px;  
+  text-align: center;
+  height: 100%;
+  justify-content: center;
+  transition: transform .18s ease;
+}
+
+.wrapper.active .login-form{
+  transition: none;
+  transform: translateX(-780px);
+}
+
+.wrapper.active .login-form{
+  transition: transform .18s ease-in-out;
+  transform: translateX(0);
+} 
+
+
+.login-form h1{
+  margin-top: 30px;
+  margin-bottom: 25px;
+  font-size: 35px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+
+input{
+  padding: 5px 28px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-right: 15px;
+}
+input:focus{
+  border-color: blue;
+  outline: 0;
+}
+label{
+  font-size: 15px;
+  color: white;
+}
+#input{
+  margin-bottom: 30px;
+}
+button{
+  padding: 10px 20px;
+  border: none;
+  background-color: green;
+  font-size: 18px;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer; 
+  transition: .5s;
+}
+button:hover{
+  background-color: red;
+}
+#add-button{
+  padding: 8px 25px;
+}
+#update-button{
+  padding: 10px 18px;
+  background-color: blue;
+  transition: .5s;
+}
+#update-button:hover{
+  background-color: purple;
+}
+#cancle-button{
+  padding: 10px 18px;
+  background-color: rgb(114, 102, 220);
+}
+#cancel-button:hover{
+  background-color: coral;
+}
+table{
+  width: 100%;
+  margin-bottom: 30px;
+  border-collapse: collapse;
+}
+tr,th{
+  padding: 9px;
+  text-align: center;
+  border: 1px solid transparent;
+}
+th{
+  background-color: green;
+  color: white;
+}
+#update-con{
+  display: none;
+  justify-content: space-between;
+  margin-right: 50px;
+  margin-top: 45px;
+}
+tbody,td{
+  text-align: center;
+  color:white;
+  padding: 5px;
+  border: 0.5px solid white;
+}
+.edit-btn{
+  width: 90px;
+  background-color: red;
+  margin: 5px;
+}
+.delete-btn{
+  background-color: rgb(213, 0, 142);
+}

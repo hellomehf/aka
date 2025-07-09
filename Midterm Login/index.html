@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+  <section>
+    <div class="container">
+      <div class="box-con">
+        <div class="box">
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <header>
+    <img src="./image/logo.png" alt="">
+    <h2 class="logo">Setec Institue</h2>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="clone.html">Course</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <button class="btnlogin">Login</button>
+    </nav>
+  </header>
+  
+  <div class="wrapper">
+    <span class="close">
+      <i class='bx bx-x'></i>
+    </span>
+    <div class="login-form-left">
+      <div class="con"></div>
+    </div>
+    <div class="login-form">
+      <h2>Sign In</h2>
+      <form action="#">
+        <div class="input-username">
+          <input type="text" id="username" placeholder="Enter your Email" required>
+          <label for="username"></label>
+          <i class='bx bx-user'></i>
+        </div>
+        <div class="input-password">
+          <input type="password" name="password" id="password" placeholder="Enter your Password"  required >
+          <label for="password"></label>
+          <i class='bx bx-lock-alt' ></i>
+          <i class="fa-regular fa-eye" name="toggle" id="toggle"></i>
+        </div>
+        <div class="forget">
+          <label for="forget"><input type="checkbox" id="forget"> Remember me</label><a href="#">Forget Password</a>
+        </div>
+        <button type="submit" class="button">Login</button>
+        <div class="register">
+          <p>Don't have account? <a href="#" class="signup-link"> Register</a></p>
+        </div>
+      </form>
+    </div>
+
+    <div class="SignUp-form">
+      <h2>Sign Up</h2>
+      <form action="#">
+        <div class="input-username">
+          <input type="text" id="username" placeholder="Enter your Username" required>
+          <label for="username"></label>
+          <i class='bx bx-user'></i>
+        </div>
+        <div class="input-Email">
+          <input type="text" id="Email" placeholder="Enter your Email" required>
+          <label for="Email"></label>
+          <i class='bx bx-envelope'></i>
+        </div>
+        <div class="input-password">
+          <input type="password" name="password" id="kj" placeholder="Enter your Password"  required >
+          <label for="password"></label>
+          <i class='bx bx-lock-alt' ></i>
+          <i class="fa-regular fa-eye" name="toggle" id="jk" ></i>
+        </div>
+        <div class="forget">
+          <label for="forget"><input type="checkbox" id="forget"> I agree to the <a href="#"> Terms & conditions</a></label>
+        </div>
+        <button type="submit">Sign Up</button>
+        <div class="register">
+          <p>Already have accounts? <a href="#" class="signin-link"> Sign In</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+  <script src="./js/login.js"></script>
+</html>

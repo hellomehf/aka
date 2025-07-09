@@ -1,0 +1,385 @@
+@font-face {
+  font-family: 'GBS';
+  src: url('../font/Poppins-Medium.ttf');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'GBS';
+}
+
+body{
+  background-image:url(../image/IT.jpg);
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+
+header{
+  position: fixed;
+  display: flex;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  background: transparent;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+img{
+  top: 0;
+  position: absolute;
+}
+.logo{
+  text-transform: uppercase;
+  margin-left: 140px;
+  font-size: 40px;
+  color: #4dff47;
+  user-select: none;
+  text-shadow: 0 0 10px #4dff47;
+}
+
+.nav a{
+  color: aliceblue;
+  position: relative;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 50px;
+}
+
+.nav a::after{
+  content: '';
+  width: 100%;
+  height: 3px;
+  background: rgb(253, 253, 253);
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  border-radius: 5px;
+  transform-origin: middle;
+  transform: scaleX(0);
+  transition: 0.3s;
+}
+
+.nav a:hover:after{
+  transform-origin: middle;
+  transform: scaleX(1);
+  
+}
+
+.nav .btnlogin{
+  color:white;
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 40px;
+  outline: none;
+  cursor: pointer;
+  border: 2px solid;
+  transition: 0.5s;
+}
+
+.nav .btnlogin:hover{
+  background-color: red;
+}
+
+.wrapper{
+  position: relative;
+  width: 750px;
+  height: 450px;
+  background: transparent;
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  border: 2px solid #0ef;
+  box-shadow: 0 0 25px #0ef; 
+  transform: scale(0);
+  overflow: hidden;
+  transition: transform .5s ease , height .2s ease;
+}
+
+.wrapper.active-pop{
+  transform: scale(1);
+}
+
+.wrapper .close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  font-size: 40px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  border-bottom-left-radius: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.wrapper .login-form{
+  margin: -10px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform .18s ease;
+}
+
+.wrapper.active .login-form{
+  transition: none;
+  transform: translateX(-780px);
+}
+
+.wrapper .SignUp-form{
+  margin: -10px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translateX(400px); 
+  transition: none; 
+}
+
+.wrapper.active .SignUp-form{
+  transition: transform .18s ease-in-out;
+  transform: translateX(0);
+}
+
+.wrapper .login-form-left{
+  position: relative;
+  width: 350px;
+  height: 100%;
+    
+}
+
+.wrapper .login-form-left .con{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(../image/IT.jpg);
+  background-size: cover;
+}
+
+
+.login-form h2{
+  font-size: 40px;
+  color: white;
+  text-align: center;
+ 
+}
+
+
+.SignUp-form h2{
+  font-size: 40px;
+  color: white;
+  text-align: center;
+ 
+}
+
+.login-form .input-username{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 20px 0;
+}
+
+.login-form .input-password{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 20px 0;
+}
+
+.SignUp-form .input-username{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 20px 0;
+}
+
+.SignUp-form .input-Email{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 20px 0;
+}
+
+.SignUp-form .input-Email i{
+  left: 1%;
+  
+}
+
+.SignUp-form .input-password{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 20px 0;
+}
+
+
+
+.input-username input{
+  color: white;
+  position: relative;
+  padding: 0 35px 0 30px;
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #0ef;
+}
+
+.input-Email input{
+  color: white;
+  position: absolute;
+  padding: 0 35px 0 30px;
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #0ef;
+}
+
+.input-password input{
+  color: white;
+  position: relative;
+  padding: 0 35px 0 30px;
+  padding-right: 45px;
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #0ef;
+}
+
+.input-username i {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  margin-right: 350px;
+  
+}
+
+.input-Email i {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  margin-right: 15px;
+  
+}
+
+.input-password i{
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  margin-right: 350px;
+}
+
+
+.input-password i:nth-child(4){
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  right: -90%;
+  color: white;
+  cursor: pointer;
+}
+
+
+button[type="submit"]{
+  position: relative;
+  width: 100%;
+  height: 45px;
+  background: transparent;
+  border: none;
+  border: 2px solid white;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+}
+
+.forget{
+  color: white;
+  margin: -5px 0 15px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+} 
+
+.forget a{
+  color: #0ef;
+  position: relative;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.forget a:hover{
+  color: #0ef;
+  text-shadow: 0 0 10px;
+}
+
+.forget input{
+  cursor: pointer;
+}
+
+.register{
+  color: white;
+  position: relative;
+  text-align: center;
+  margin: 25px 0 10px;
+}
+
+.register p{
+  user-select: none;
+}
+
+.register p a{
+  text-decoration: none;
+  color: #0ef;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.register p a:hover{
+  color: #0ef;
+  text-shadow: 0 0 10px;
+}
+
